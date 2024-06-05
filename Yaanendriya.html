@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaanendriya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+header {
+    background-color: #134786;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+	text-align : left;
+
+   justify-content:space-around ; /* Space between logo+title and navigation */
+    position: absolute;
+    width: 100%;
+	font-size: 1.5em;
+    z-index: 1000;
+}
+
+header img {
+    height: 200px; /* Adjust the size as needed */
+    margin-right: 300px; /* Space between the logo and the text */
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+	position: absolute;
+    left: 25%;
+    transform: translateX(-25%);
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 16px;
+    margin-left: 20px; /* Space between navigation links */
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+    border-radius: 4px;
+}
+        main {
+            padding: 20px;
+            padding-top: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+.team-section, .services-section, .product-line-section, .contact-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin: 20px 0;
+	
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.team-section ul {
+    display: flex;
+    flex-wrap: wrap;
+	
+    justify-content: space-around;
+    padding: 0;
+}
+.team-section ul li {
+    flex: 1 1 20%;
+    margin: 10px;
+    text-align: center;
+}
+.team-section ul li img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+	font-size: 2em;
+    object-fit: cover;
+    cursor: default; /* Ensure the cursor doesn't change on hover */
+}
+
+.team-section ul li {
+    cursor: default; /* Ensure li elements also have default cursor */
+	list-style-type: none;
+}
+.team-heading {
+    font-size: 2em;
+}
+.Home-section {
+	font-size: 3em;
+	text-align: left;
+
+}
+/* Style for the home section */
+#home {
+    padding: 300px;
+}
+.highlight {
+    background-color: white; /* Change to your preferred highlight color */
+    color: black; /* Ensure the text color is readable */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+.highlight-text-home {
+    background-color: #02D9FB; /* Change to your preferred highlight color */
+    color: black; /* Ensure the text color is readable */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+/* Center the heading */
+#home h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+/* Full-width animation section */
+.full-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.full-width img {
+    width: 30%;
+    height: auto;
+    max-width: 4000px; /* Adjust as needed */
+}
+
+.full-width .animation-text {
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    text-align: left;
+	font-size: 1.5em;
+    margin-top: 10px; /* Reduced margin */
+	
+}
+
+/* Side-by-side animation section */
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.side-by-side img {
+    width: 50%;
+    height: auto;
+	
+}
+
+.side-by-side .animation-text {
+    width: 45%;
+    margin-left: 10px; /* Reduced margin */
+}
+
+.side-by-side.reverse {
+    flex-direction: row-reverse; /* Reverse the order of elements */
+}
+
+.side-by-side.reverse .animation-text {
+    margin-left: 0;
+    margin-right: 10px; /* Adjust margin for the reversed layout */
+}
+
+
+.about-section {
+    opacity: 0;
+	font-size: 1.5em;
+    transition: opacity 1s ease-out;
+}
+
+#about-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+	font-size: 1em;
+    border-right: 0.15em solid orange; /* Cursor effect */
+    animation: typing 0s steps(40, end), blink-caret 0.75s step-end 50;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.contact-section {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    border-radius: 8px;
+    max-width: 650px; /* Increase the max-width */
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-section .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+}
+
+.contact-section textarea {
+    resize: vertical;
+}
+.contact-section .form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-section .form-check input[type="checkbox"] {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+
+.contact-section button {
+    width: 100%;
+
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.services-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.services-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 30%;
+}
+
+.column h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column ul li {
+    
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo_no_bg.gif" alt="Yaanendriya Logo">
+		<h1 >YAANENDRIYA</h1>
+  
+    <nav>
+        <a href="#home" id="homeTab">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+	  </header>
+    <main>
+<section id="home">
+    <p class = "Home-section  " >Revolutionizing </p> 
+	<span class = "Home-section highlight-text-home"> Sensor Solutions </span> <span class = "Home-section ">with </span>
+	<p class = "Home-section">Precision and Innovation.</p> 
+
+    <div class="animation-section side-by-side">
+        <img src="Images/YQX 420p.gif" alt="Animation GIF">
+        <div class="animation-text">
+            <p>In the navigation and robotics industry, IMUs play a critical role in providing accurate motion sensing and orientation data. These devices are essential for autonomous vehicles, drones, and robotic systems, enabling precise control and stability even in dynamic environments. IMUs contribute to advanced navigation solutions by offering real-time information on velocity, acceleration, and angular rate, ensuring reliable performance in complex tasks such as mapping, localization, and obstacle avoidance.</p>
+        </div>
+    </div>
+    <div class="animation-section side-by-side reverse">
+
+        <img src="Images/YDX 420p.gif" alt="Animation GIF">
+		        <div class="animation-text">
+            <p> In gaming, Inertial Measurement Units (IMUs) enhance the user experience by enabling precise motion tracking and realistic interaction. By detecting acceleration, rotation, and magnetic field strength, IMUs allow for accurate control and immersive gameplay in virtual reality (VR) and augmented reality (AR) environments. This technology enables gamers to interact naturally with the virtual world, translating physical movements into in-game actions with high fidelity.</p>
+        </div>
+    </div>
+</section>
+
+
+		<section id="about" class="about-section">
+			<h2>About Us </h2>
+			<p id="about-text">Advanced System-on-Modules integrating AI-enhanced GNSS and INS capabilities. Empowering buyers with smarter, cost-effective solutions.</p>
+		</section>
+
+        <section id="team" class="team-section" >
+            <h2 class="team-heading">Meet The Team</h2>
+            <ul>
+                <li>
+                    <img src="Images/Vamshi.png" alt="Vamshi Bharadwaj MV" >
+                    <p>Vamshi Bharadwaj MV - Chief of Technology and Execution</p>
+                </li>
+                <li>
+                    <img src="Images/Jackson.png" alt="Jackson Charles">
+                    <p>Jackson Charles - Chief Animator & Head of Product Management</p>
+                </li>
+                <li>
+                    <img src="Images/Vijay.png" alt="Vijay H.P.">
+                    <p>Vijay H.P. - Chief of Engineer & Administration</p>
+                </li>
+                <li>
+                    <img src="Images/Sivan.png" alt="Sivan Sriman">
+                    <p>Sivan Sriman - Chief Embedded Engineer</p>
+                </li>
+                <li>
+                    <img src="Images/Vyshak.png" alt="Vyshak Y">
+                    <p>Vyshak Y - Chief of Operations & Business</p>
+                </li>
+            </ul>
+        </section>
+
+
+<section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-columns">
+        <div class="column">
+            <h3>Sensor Modules</h3>
+            <ul>
+                <li>IMU sensors</li>
+                <li>Vibration sensors</li>
+                <li>Inclinometer sensors</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Additional Features</h3>
+            <ul>
+                <li>AI Assisted</li>
+                <li>Drivers</li>
+                <li>Support team</li>
+                <li>Firmware development</li>
+                <li>Calibration software support</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Motion Capture</h3>
+            <ul>
+                <li>System on module</li>
+                <li>Breakout boards</li>
+                <li>Sensor modules</li>
+            </ul>
+        </div>
+    </div>
+</section>
+        <section id="products" class="product-line-section">
+            <h2>Product Line</h2>
+			<div class="animation-section full-width ">
+				<img src="Images/SOM_anim.gif" alt="Animation GIF">
+				<div class="animation-text">
+					<p>Yaanendriya introduces innovative System-on-Modules (SoM) integrating advanced GNSS and INS capabilities. Our AI-enhanced DIMU, SIMU, and EPS modules offer smarter, precise solutions, boosting efficiency. These cost-effective, adaptable modules empower both global and Indian buyers, supporting domestic manufacturing and transforming industry standards.</p>
+            <p>Coming Soon...</p>
+				</div>
+            <a href="path/to/datasheet.pdf" class = "highlight">Download Datasheet</a>
+        </section>
+		<section id="contact" class="contact-section">
+			<h2>Contact Us</h2>
+			<form action="your_form_action_url" method="post">
+				<div class="form-group">
+					<label for="first-name">First Name:</label>
+					<input type="text" id="first-name" name="first-name" required>
+				</div>
+				<div class="form-group">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="last-name" name="last-name" required>
+				</div>
+				<div class="form-group">
+					<label for="organization">Organization:</label>
+					<input type="text" id="organization" name="organization">
+				</div>
+				<div class="form-group">
+					<label for="location">Location:</label>
+					<input type="text" id="location" name="location">
+				</div>
+				<div class="form-group">
+					<label for="contact">Your Contact (Optional):</label>
+					<input type="text" id="contact" name="contact">
+				</div>
+				<div class="form-group">
+					<label for="email">Your Mail ID:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="message">Write us:</label>
+					<textarea id="message" name="message" required></textarea>
+				</div>
+				<div class="form-group form-check">
+					<input type="checkbox" id="subscribe" name="subscribe">
+					<label for="subscribe">Subscribe to our marketing emails</label>
+				</div>
+				<div class="form-group form-check">
+					<input type="checkbox" id="linkedin-newsletter" name="linkedin-newsletter">
+					<label for="linkedin-newsletter">Subscribe to our LinkedIn newsletter</label>
+				</div>
+				<button type="submit">Send</button>
+			</form>
+		</section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Yaanendriya. All rights reserved.</p>
+        <p>Email: contact@yaanendriya.com | Address: Artpark, HMT Colony, Jalahalli, Bangalore 560013</p>
+        <p><a href="privacy-policy.html" class = "highlight">Privacy Policy</a> | <a href="cookie-policy.html" class = "highlight">Cookie Policy</a></p>
+    </footer>
+
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutSection = document.getElementById('about');
+    const aboutText = document.getElementById('about-text');
+    let isTyping = false;
+
+    window.addEventListener('scroll', () => {
+        const aboutPosition = aboutSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (aboutPosition < screenPosition && !isTyping) {
+            isTyping = true;
+            aboutText.style.animation = 'none'; // Reset animation
+            setTimeout(() => {
+                aboutText.style.animation = '';
+                aboutText.style.animation = 'typing 4s steps(60, end), blink-caret 0.75s step-end infinite';
+                aboutSection.style.opacity = '1';
+            }, 50); // Small delay to allow reset
+        } else if (aboutPosition > screenPosition) {
+            isTyping = false;
+            aboutSection.style.opacity = '0';
+        }
+    });
+});
+</script>
+
+</html>
